@@ -156,10 +156,10 @@ class HighlightView {
                 drawCircle(canvas);
             }
 
-            if (handleMode == HandleMode.Always ||
-                    (handleMode == HandleMode.Changing && modifyMode == ModifyMode.Grow)) {
+        //    if (handleMode == HandleMode.Always ||
+               //     (handleMode == HandleMode.Changing && modifyMode == ModifyMode.Grow)) {
                 drawHandles(canvas);
-            }
+           // }
         }
     }
 
