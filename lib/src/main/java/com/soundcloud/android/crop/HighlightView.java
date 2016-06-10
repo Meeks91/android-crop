@@ -66,7 +66,7 @@ class HighlightView {
 
     private View viewContext; // View displaying image
     private boolean showThirds;
-    private boolean showCircle;
+    private boolean showCircle = true;
     private int highlightColor;
 
     private ModifyMode modifyMode = ModifyMode.None;
@@ -88,7 +88,7 @@ class HighlightView {
         TypedArray attributes = context.obtainStyledAttributes(outValue.resourceId, R.styleable.CropImageView);
         try {
             showThirds = attributes.getBoolean(R.styleable.CropImageView_showThirds, false);
-            showCircle = attributes.getBoolean(R.styleable.CropImageView_showCircle, false);
+           // showCircle = attributes.getBoolean(R.styleable.CropImageView_showCircle, true);
             highlightColor = attributes.getColor(R.styleable.CropImageView_highlightColor,
                     DEFAULT_HIGHLIGHT_COLOR);
             handleMode = HandleMode.values()[attributes.getInt(R.styleable.CropImageView_showHandles, 0)];
